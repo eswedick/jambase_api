@@ -6,7 +6,6 @@ from jambase_api.Classes.external_identifier import ExternalIdentifier
 from jambase_api.Classes.music_venue import MusicVenue
 from jambase_api.Classes.offer import Offer
 from jambase_api.Classes.performer import Performer
-from jambase_api.Classes.place import Place
 from jambase_api.Classes.url import Url
 
 
@@ -24,7 +23,7 @@ class Concert:
     endDate: str
     previousStartDate: str
     doorTime: str
-    location: Place
+    location: MusicVenue
     offers: List[Offer]
     performer: List[Performer]
     eventAttendanceMode: AttendanceMode
