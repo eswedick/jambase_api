@@ -1,13 +1,8 @@
 import pytest
-import os
-from jambase_api.jambase import JamBase
-from dotenv import load_dotenv
 
 
-@pytest.fixture(scope="session")
-def test_get_genres():
-    _jambase = JamBase(api_key=os.getenv('API_KEY'))
-    genres = _jambase.get_genres()
+def test_get_genres(jambase):
+    genres = jambase.get_genres()
 
     try:
         response_json = genres.json()

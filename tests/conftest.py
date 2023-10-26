@@ -6,8 +6,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-
-@pytest.fixture(scope="session")
+@pytest.fixture
 def jambase():
     _jambase = JamBase(api_key=os.getenv('API_KEY'))
     return _jambase
