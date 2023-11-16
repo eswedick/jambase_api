@@ -7,7 +7,7 @@ Python API wrapper for the [Jambase Concert API](https://www.jambase.com/concert
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install jambase_api.
 
 ```bash
-pip install foobar
+pip install jambase_api
 ```
 
 ## API Keys
