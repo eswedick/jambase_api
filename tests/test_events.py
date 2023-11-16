@@ -3,7 +3,7 @@ from jambase_api.Enums.event_data_source import EventDataSource
 
 
 def test_search_events_by_artist_name(jambase):
-    response = jambase.get_events_by_artist_name("saturdays at your place")
+    response = jambase.get_events_by_artist_name("taylor swift")
 
     events = [Event(**event) for event in response["events"]]
 
@@ -29,7 +29,7 @@ def test_search_by_venue_name(jambase):
 
 
 def test_get_events_for_artist(jambase):
-    res = jambase.get_events_by_artist(EventDataSource.JAMBASE.value, "9810439")
+    res = jambase.get_events_by_artist(EventDataSource.JAMBASE.value, "44745")
     events = [Event(**event) for event in res["events"]]
 
     assert events

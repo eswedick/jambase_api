@@ -34,15 +34,8 @@ class JamBaseBase:
     def call_api_get(self, method, **kwargs):
         args = self.__reduce_kwargs(kwargs)
         url = self.server_url + method
-        # convert to key[]=val1&key[]=val2 for args like key=[val1, val2], else key=val
-        params = "&".join(
-            "&".join(i + "[]=" + j for j in args[i])
-            if isinstance(args[i], list)
-            else i + "=" + str(args[i])
-            for i in args
-        )
-        params_string = urllib.parse.urlencode(params)
-        url_with_params = "%s%s&apikey=%s" % (url, '?' + params_string if params_string else '', self.api_key)
+        params_string = urllib.parse.urlencode(args)
+        url_with_params = "%s?apikey=%s%s" % (url, self.api_key, "&"+params_string if params_string else '')
 
         response = self.req.get(
             url_with_params,
