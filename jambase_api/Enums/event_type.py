@@ -2,5 +2,5 @@ from enum import Enum
 
 
 class EventType(Enum):
-    concerts = "concerts"
-    festivals = "festivals"
+    CONCERTS = "concerts"
+    FESTIVALS = "festivals"

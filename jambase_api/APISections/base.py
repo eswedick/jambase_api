@@ -1,5 +1,5 @@
 import requests
-
+import urllib.parse
 
 class JamBaseBase:
     def __init__(
@@ -41,11 +41,30 @@ class JamBaseBase:
             else i + "=" + str(args[i])
             for i in args
         )
-        return self.req.get(
-            "%s?%s" % (url, params) + "apikey=" + self.api_key,
+        params_string = urllib.parse.urlencode(params)
+        url_with_params = "%s%s&apikey=%s" % (url, '?' + params_string if params_string else '', self.api_key)
+
+        response = self.req.get(
+            url_with_params,
             headers=self.headers,
             verify=self.ssl_verify,
             cert=self.cert,
             proxies=self.proxies,
             timeout=self.timeout,
         )
+
+        #return response.json()
+        return self.remove_chars_from_keys(response.json(), "@-")
+
+    @staticmethod
+    def remove_chars_from_keys(obj, chars_to_remove):
+        if isinstance(obj, dict):
+            new_obj = {}
+            for key, value in obj.items():
+                new_key = key.translate(str.maketrans('', '', chars_to_remove))
+                new_obj[new_key] = JamBaseBase.remove_chars_from_keys(value, chars_to_remove)
+            return new_obj
+        elif isinstance(obj, list):
+            return [JamBaseBase.remove_chars_from_keys(item, chars_to_remove) for item in obj]
+        else:
+            return obj

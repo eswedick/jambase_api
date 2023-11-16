@@ -1,12 +1,10 @@
-import pytest
+from jambase_api.Enums.genre import Genre
 
 
 def test_get_genres(jambase):
-    genres = jambase.get_genres()
+    json = jambase.get_genres()["genres"]
 
-    try:
-        response_json = genres.json()
-    except genres.JSONDecodeError:
-        pytest.fail("Response content is not valid JSON")
+    response_genres = [genre["identifier"] for genre in json]
 
-    assert 'genres' in response_json
+    for value in Genre:
+        assert value.value in response_genres

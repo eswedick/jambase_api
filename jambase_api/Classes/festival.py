@@ -1,4 +1,4 @@
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from typing import List
 from jambase_api.Enums.festival_lineup_display_option import FestivalLineupDisplayOption
 from jambase_api.Classes.url import Url
@@ -11,7 +11,7 @@ from jambase_api.Enums.attendance_mode import AttendanceMode
 
 @dataclass
 class Festival:
-    type: str
+    type: str = field(metadata={"name": "@type"})
     lineupDisplayOptions: FestivalLineupDisplayOption
     name: str
     identifier: str

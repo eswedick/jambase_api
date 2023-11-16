@@ -1,11 +1,11 @@
 from enum import Enum
 
 
-class Genre(Enum):
-    today = "today"
-    tomorrow = "tomorrow"
-    thisWeekend = "thisWeekend"
-    nextWeekend = "nextWeekend"
-    halloween = "halloween"
-    newYears = "newYears"
-    july4th = "july4th"
+class DatePresets(Enum):
+    TODAY = "today"
+    TOMORROW = "tomorrow"
+    THIS_WEEKEND = "thisWeekend"
+    NEXT_WEEKEND = "nextWeekend"
+    HALLOWEEN = "halloween"
+    NEW_YEARS = "newYears"
+    JULY_4TH = "july4th"

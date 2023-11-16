@@ -7,9 +7,6 @@ from jambase_api.Classes.postal_address import PostalAddress
 from jambase_api.Classes.url import Url
 
 
-
-
-
 @dataclass
 class MusicVenue:
     identifier: str

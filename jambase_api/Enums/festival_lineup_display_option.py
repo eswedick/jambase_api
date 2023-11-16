@@ -2,5 +2,5 @@ from enum import Enum
 
 
 class FestivalLineupDisplayOption(Enum):
-    full = "full"
-    daybyday = "daybyday"
+    FULL = "full"
+    DAY_BY_DAY = "daybyday"

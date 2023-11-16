@@ -2,12 +2,12 @@ from enum import Enum
 
 
 class UrlType(Enum):
-    officialSite = "officialSite"
-    facebook = "facebook"
-    twitter = "twitter"
-    instagram = "instagram"
-    youtube = "youtube"
-    musicbrainz = "musicbrainz"
-    spotify = "spotify"
-    androidApp = "androidApp"
-    iosApp = "iosApp"
+    OFFICIAL_SITE = "officialSite"
+    FACEBOOK = "facebook"
+    TWITTER = "twitter"
+    INSTAGRAM = "instagram"
+    YOUTUBE = "youtube"
+    MUSICBRAINZ = "musicbrainz"
+    SPOTIFY = "spotify"
+    ANDROID_APP = "androidApp"
+    IOS_APP = "iosApp"

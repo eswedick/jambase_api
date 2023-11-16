@@ -7,19 +7,18 @@ class JamBaseEvents(JamBaseBase):
         kwargs["venueName"] = venue_name
         return self.call_api_get("events/", kwargs=kwargs)
 
-    def search_by_artist_name(self, artist_name, **kwargs):
+    def get_events_by_artist_name(self, artist_name, **kwargs):
         """Search for events by artist name"""
         kwargs["artistName"] = artist_name
         return self.call_api_get("events/", kwargs=kwargs)
 
-    def search_by_artist(self, artist_data_source, artist_id, **kwargs):
+    def get_events_by_artist(self, artist_data_source, artist_id, **kwargs):
         """Search for events by artist"""
-        return self.call_api_get("events/"+artist_data_source+":"+artist_id, kwargs=kwargs)
+        return self.call_api_get("events?artistId="+artist_data_source+":"+artist_id, kwargs=kwargs)
 
-    def search_by_city(self, city_id, **kwargs):
+    def get_events_by_city(self, city_id, **kwargs):
         """Search for events by city."""
-        kwargs["geoCityId"] = city_id
-        return self.call_api_get("events/+", kwargs=kwargs)
+        return self.call_api_get("events?geoCityId=jambase%3A" + str(city_id), kwargs=kwargs)
 
     def get_event(self, event_data_source, event_id, **kwargs):
         """Get event data by data source and id"""

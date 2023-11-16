@@ -1,17 +1,27 @@
 from dataclasses import dataclass
-from typing import List
 from jambase_api.Classes.address import Address
-from jambase_api.Classes.city import City
 from jambase_api.Classes.geo_coordinates import GeoCoordinates
 
 
 @dataclass
-class AdministrativeArea:
+class MetroCity:
     type: str
     identifier: str
     name: str
     geo: GeoCoordinates
     address: Address
-    containsPlace: List[City]
-    primaryCityId: int
-    numUpcomingEvents: int
+    timezone: str
+    xcontainedInPlace: []
+    xnumUpcomingEvents: int
+
+
+@dataclass
+class Metro:
+    type: str
+    identifier: str
+    name: str
+    geo: GeoCoordinates
+    address: Address
+    #containsPlace: List[MetroCity]
+    xprimaryCityId: int
+    xnumUpcomingEvents: int

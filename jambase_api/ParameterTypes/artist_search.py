@@ -8,7 +8,7 @@ class ArtistSearch(Enum):
     artistHasUpcomingEvents = "artistHasUpcomingEvents"
     dateModifiedFrom = "dateModifiedFrom"
     datePublishedFrom = "datePublishedFrom"
-    eventDataSource = "eventDataSource"
+    artistDataSource = "artistDataSource"
     eventDateFrom = "eventDateFrom"
     eventDatePreset = "eventDatePreset"
     eventDateTo = "eventDateTo"
