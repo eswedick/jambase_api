@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 from typing import List
-from jambase_api.Classes.url import Url
+from url import Url
 
 
 @dataclass

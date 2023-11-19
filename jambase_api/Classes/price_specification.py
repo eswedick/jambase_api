@@ -1,10 +1,10 @@
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from decimal import Decimal
 
 
 @dataclass
 class PriceSpecification:
-    type: str = field(metadata={"name": "@type"})
+    type: str
     minPrice: Decimal
     maxPrice: Decimal
     price: Decimal

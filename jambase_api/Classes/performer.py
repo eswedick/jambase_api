@@ -1,15 +1,15 @@
 from dataclasses import dataclass
 from typing import List
-from jambase_api.Classes.external_identifier import ExternalIdentifier
-from jambase_api.Classes.place import Place
+from external_identifier import ExternalIdentifier
+from place import Place
 from jambase_api.Enums.band_or_musician import BandOrMusician
-from jambase_api.Classes.geo_coordinates import GeoCoordinates
-from jambase_api.Classes.postal_address import PostalAddress
+from geo_coordinates import GeoCoordinates
+from postal_address import PostalAddress
 from jambase_api.Enums.genre import Genre
-from jambase_api.Classes.url import Url
-from jambase_api.Classes.music_group import MusicGroup
+from url import Url
+from music_group import MusicGroup
 from jambase_api.Enums.attendance_mode import AttendanceMode
-from jambase_api.Classes.offer import Offer
+from offer import Offer
 from jambase_api.Enums.event_status import EventStatus
 
 

@@ -2,12 +2,13 @@ from dataclasses import dataclass
 from typing import List
 from jambase_api.Enums.attendance_mode import AttendanceMode
 from jambase_api.Enums.event_status import EventStatus
-from jambase_api.Classes.external_identifier import ExternalIdentifier
-from jambase_api.Classes.geo_coordinates import GeoCoordinates
-from jambase_api.Classes.postal_address import PostalAddress
-from jambase_api.Classes.offer import Offer
-from jambase_api.Classes.performer import Performer
-from jambase_api.Classes.url import Url
+from external_identifier import ExternalIdentifier
+from geo_coordinates import GeoCoordinates
+from postal_address import PostalAddress
+from offer import Offer
+from performer import Performer
+from url import Url
+
 
 @dataclass
 class ConcertMusicVenue:

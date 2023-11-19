@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 
 
 @dataclass
 class Member:
-    type: str = field(metadata={"name": "@type"})
+    type: str
     name: str
     identifier: str
     image: str

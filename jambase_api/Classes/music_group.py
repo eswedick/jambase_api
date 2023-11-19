@@ -1,11 +1,10 @@
 from dataclasses import dataclass
-from typing import List, Union
-from jambase_api.Classes.external_identifier import ExternalIdentifier
-from jambase_api.Classes.place import Place
-from jambase_api.Classes.member import Member
+from typing import List
+from place import Place
+from member import Member
 from jambase_api.Enums.band_or_musician import BandOrMusician
 from jambase_api.Enums.genre import Genre
-from jambase_api.Classes.url import Url
+from url import Url
 
 
 @dataclass

@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field
 from typing import List
 from jambase_api.Enums.festival_lineup_display_option import FestivalLineupDisplayOption
-from jambase_api.Classes.url import Url
+from url import Url
 from jambase_api.Enums.event_status import EventStatus
-from jambase_api.Classes.music_venue import MusicVenue
-from jambase_api.Classes.offer import Offer
-from jambase_api.Classes.performer import Performer
+from music_venue import MusicVenue
+from offer import Offer
+from performer import Performer
 from jambase_api.Enums.attendance_mode import AttendanceMode
 
 

@@ -1,8 +1,8 @@
 from dataclasses import dataclass
 from typing import List
-from jambase_api.Classes.geo_coordinates import GeoCoordinates
-from jambase_api.Classes.postal_address import PostalAddress
-from jambase_api.Classes.url import Url
+from geo_coordinates import GeoCoordinates
+from postal_address import PostalAddress
+from url import Url
 
 
 @dataclass

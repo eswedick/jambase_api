@@ -1,16 +1,16 @@
 from dataclasses import dataclass, field
-from jambase_api.Classes.geo_coordinates import GeoCoordinates
-from jambase_api.Classes.address import Address
-from jambase_api.Classes.administrative_area import AdministrativeArea
+from geo_coordinates import GeoCoordinates
+from address import Address
+from administrative_area import Metro
 
 
 @dataclass
 class City:
-    type: str = field(metadata={"name": "@type"})
+    type: str
     identifier: str
     name: str
     geo: GeoCoordinates
     address: Address
     timezone: str
-    containedInPlace: AdministrativeArea
+    containedInPlace: Metro
     numUpcomingEvents: int

@@ -1,6 +1,6 @@
 from dataclasses import dataclass
-from jambase_api.Classes.state import State
-from jambase_api.Classes.country import Country
+from state import State
+from country import Country
 
 
 @dataclass

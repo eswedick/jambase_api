@@ -1,6 +1,6 @@
 from dataclasses import dataclass
-from jambase_api.Classes.address import Address
-from jambase_api.Classes.geo_coordinates import GeoCoordinates
+from address import Address
+from geo_coordinates import GeoCoordinates
 
 
 @dataclass
