@@ -3,15 +3,15 @@ from typing import List
 from jambase_api.Classes.concert import Concert
 from jambase_api.Classes.music_venue import MusicVenue
 from jambase_api.Classes.offer import Offer
-from jambase_api.Classes.performer import Performer
+from jambase_api.Classes.performer import StreamPerformer
 from jambase_api.Classes.url import Url
-
 from jambase_api.Enums.attendance_mode import AttendanceMode
 from jambase_api.Enums.event_status import EventStatus
 
 
 @dataclass
 class Stream:
+    type: str
     name: str
     identifier: str
     url: str
@@ -26,11 +26,9 @@ class Stream:
     doorTime: str
     location: MusicVenue
     offers: List[Offer]
-    performer: List[Performer]
+    performer: List[StreamPerformer]
     eventAttendanceMode: AttendanceMode
     isAccessibleForFree: bool
-    x_promoImage: str
-    type: str
     isLiveBroadcast: bool
+    xcustomTitle: str
     broadcastOfEvent: List[Concert]
-    x_customTitle: str

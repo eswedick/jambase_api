@@ -13,7 +13,7 @@ def test_search_by_name(jambase):
 def test_get_venue(jambase):
     response = jambase.get_venue(VenueDataSource.JAMBASE.value, '62108')
 
-    venue = MusicVenue(*response["venue"])
+    venue = MusicVenue(**response["venue"])
 
     assert venue
 

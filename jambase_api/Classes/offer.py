@@ -7,11 +7,10 @@ from jambase_api.Classes.url import Url
 
 @dataclass
 class Offer:
+    type: str
     name: str
     identifier: str
     url: str
-    image: str
-    sameAs: List[Url]
     datePublished: str
     dateModified: str
     category: str

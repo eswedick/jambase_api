@@ -33,6 +33,24 @@ class PerformerConcertMusicVenue:
 
 
 @dataclass
+class StreamPerformer:
+    type: str
+    name: str
+    identifier: str
+    url: str
+    image: str
+    datePublished: str
+    dateModified: str
+    xbandOrMusician: BandOrMusician
+    xnumUpcomingEvents: int
+    genre: Genre
+    xperformanceDate: str
+    xperformanceRank: int
+    xisHealiner: bool
+    xdateIsConfirmed: bool
+
+
+@dataclass
 class PerformerConcert:
     name: str
     identifier: str
@@ -59,13 +77,14 @@ class PerformerConcert:
     headlinerInSupport: bool
     streamIds: List[str]
 
+
 @dataclass
 class Performer:
+    type: str
     name: str
     identifier: str
     url: str
     image: str
-    sameAs: List[Url]
     datePublished: str
     dateModified: str
     member: List[MusicGroup]
@@ -74,10 +93,10 @@ class Performer:
     foundingDate: str
     genre: List[Genre]
     events: List[PerformerConcert]
-    bandOrMusician: BandOrMusician
-    numUpcomingEvents: int
+    xbandOrMusician: BandOrMusician
+    xnumUpcomingEvents: int
     externalIdentifiers: List[ExternalIdentifier]
-    performanceDate: str
-    performanceRank: int
-    isHeadliner: bool
-    dateIsConfirmed: bool
+    xperformanceDate: str
+    xperformanceRank: int
+    xisHeadliner: bool
+    xdateIsConfirmed: bool
