@@ -2,7 +2,8 @@ from enum import Enum
 
 
 class CountryCodeIso3(Enum):
-    """Country codes in ISO 3166-1 alpha-3 format """
+    """Country codes in ISO 3166-1 alpha-3 format"""
+
     ABW = "ABW"
     AFG = "AFG"
     AGO = "AGO"

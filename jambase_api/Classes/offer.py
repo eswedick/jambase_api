@@ -1,6 +1,7 @@
 from dataclasses import dataclass
-from organization import Organization
-from price_specification import PriceSpecification
+
+from .organization import Organization
+from .price_specification import PriceSpecification
 
 
 @dataclass

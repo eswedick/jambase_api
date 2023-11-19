@@ -1,7 +1,8 @@
 from dataclasses import dataclass, field
-from geo_coordinates import GeoCoordinates
-from address import Address
-from administrative_area import Metro
+
+from .address import Address
+from .administrative_area import Metro
+from .geo_coordinates import GeoCoordinates
 
 
 @dataclass

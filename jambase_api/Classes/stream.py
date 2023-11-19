@@ -1,12 +1,13 @@
 from dataclasses import dataclass
 from typing import List
-from concert import Concert
-from music_venue import MusicVenue
-from offer import Offer
-from performer import StreamPerformer
-from url import Url
-from jambase_api.Enums.attendance_mode import AttendanceMode
-from jambase_api.Enums.event_status import EventStatus
+
+from ..Enums.attendance_mode import AttendanceMode
+from ..Enums.event_status import EventStatus
+from .concert import Concert
+from .music_venue import MusicVenue
+from .offer import Offer
+from .performer import StreamPerformer
+from .url import Url
 
 
 @dataclass

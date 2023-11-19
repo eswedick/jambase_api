@@ -1,4 +1,4 @@
-from jambase_api.APISections.base import JamBaseBase
+from .base import JamBaseBase
 
 
 class JamBaseVenues(JamBaseBase):
@@ -9,4 +9,6 @@ class JamBaseVenues(JamBaseBase):
 
     def get_venue(self, venue_data_source, venue_id, **kwargs):
         """Get venue data by data source and id"""
-        return self.call_api_get("venues/id/"+venue_data_source+":"+venue_id, kwargs=kwargs)
+        return self.call_api_get(
+            "venues/id/" + venue_data_source + ":" + venue_id, kwargs=kwargs
+        )

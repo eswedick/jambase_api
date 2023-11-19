@@ -1,6 +1,7 @@
 from dataclasses import dataclass
-from address import Address
-from geo_coordinates import GeoCoordinates
+
+from .address import Address
+from .geo_coordinates import GeoCoordinates
 
 
 @dataclass
@@ -22,6 +23,6 @@ class Metro:
     name: str
     geo: GeoCoordinates
     address: Address
-    #containsPlace: List[MetroCity]
+    # containsPlace: List[MetroCity]
     xprimaryCityId: int
     xnumUpcomingEvents: int

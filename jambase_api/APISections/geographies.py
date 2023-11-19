@@ -1,10 +1,10 @@
-from jambase_api.APISections.base import JamBaseBase
+from .base import JamBaseBase
 
 
 class JamBaseGeographies(JamBaseBase):
     def search_cities(self, **kwargs):
         """Search for cities. Results will be returned in order of most to least upcoming events in the city,
-        and then alphabetically city name in the case of a tie. """
+        and then alphabetically city name in the case of a tie."""
         return self.call_api_get("geographies/cities", kwargs=kwargs)
 
     def get_metros(self, **kwargs):

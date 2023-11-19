@@ -1,5 +1,6 @@
 from dataclasses import dataclass
-from jambase_api.Enums import url_type
+
+from ..Enums import url_type
 
 
 @dataclass

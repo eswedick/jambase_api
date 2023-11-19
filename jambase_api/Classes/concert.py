@@ -1,13 +1,14 @@
 from dataclasses import dataclass
 from typing import List
-from jambase_api.Enums.attendance_mode import AttendanceMode
-from jambase_api.Enums.event_status import EventStatus
-from external_identifier import ExternalIdentifier
-from geo_coordinates import GeoCoordinates
-from postal_address import PostalAddress
-from offer import Offer
-from performer import Performer
-from url import Url
+
+from ..Enums.attendance_mode import AttendanceMode
+from ..Enums.event_status import EventStatus
+from .external_identifier import ExternalIdentifier
+from .geo_coordinates import GeoCoordinates
+from .offer import Offer
+from .performer import Performer
+from .postal_address import PostalAddress
+from .url import Url
 
 
 @dataclass
@@ -23,7 +24,7 @@ class ConcertMusicVenue:
     maximumAttendeeCapacity: int
     address: PostalAddress
     geo: GeoCoordinates
-    #events: List[Event]
+    # events: List[Event]
     isPermanentlyClosed: bool
     numUpcomingEvents: int
     externalIdentifiers: List[ExternalIdentifier]

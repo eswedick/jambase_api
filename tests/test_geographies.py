@@ -2,6 +2,7 @@ from jambase_api.Classes.administrative_area import Metro
 from jambase_api.Enums.state import StateCode
 from jambase_api.Enums.country_iso2 import CountryCodeIso2
 
+
 def test_search_cities(jambase):
     pass
 
@@ -39,4 +40,3 @@ def test_get_countries(jambase):
             assert any(member.value == country for member in CountryCodeIso2)
         except AssertionError as e:
             print("Country in response not in Enum: {country}", country)
-

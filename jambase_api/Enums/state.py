@@ -4,7 +4,8 @@ from enum import Enum
 class StateCode(Enum):
     """State code in ISO 3166-2 format. Note 1: Available for the United States, Canada, and Australia only. Note 2: The
     country and numUpcomingEvents nodes are only provided in the Geography lookup endpoints, not as part of
-    addressRegion within a Concert, Festival, or Stream. """
+    addressRegion within a Concert, Festival, or Stream."""
+
     US_AL = "US-AL"
     US_AK = "US-AK"
     US_AZ = "US-AZ"
@@ -56,12 +57,12 @@ class StateCode(Enum):
     US_WI = "US-WI"
     US_WY = "US-WY"
     US_DC = "US-DC"
-    #US_AS = "US-AS"
-    #US_GU = "US-GU"
-    #US_MP = "US-MP"
-    #US_PR = "US-PR"
-    #US_UM = "US-UM"
-    #US_VI = "US-VI"
+    # US_AS = "US-AS"
+    # US_GU = "US-GU"
+    # US_MP = "US-MP"
+    # US_PR = "US-PR"
+    # US_UM = "US-UM"
+    # US_VI = "US-VI"
     AU_ACT = "AU-ACT"
     AU_NSW = "AU-NSW"
     AU_NT = "AU-NT"

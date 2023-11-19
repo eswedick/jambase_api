@@ -1,8 +1,9 @@
 from dataclasses import dataclass
 from typing import List
-from geo_coordinates import GeoCoordinates
-from postal_address import PostalAddress
-from url import Url
+
+from .geo_coordinates import GeoCoordinates
+from .postal_address import PostalAddress
+from .url import Url
 
 
 @dataclass
@@ -20,5 +21,3 @@ class MusicVenue:
     maximumAttendeeCapacity: int
     xisPermanentlyClosed: bool
     xnumUpcomingEvents: int
-
-

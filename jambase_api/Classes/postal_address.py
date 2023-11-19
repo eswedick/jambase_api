@@ -1,6 +1,7 @@
 from dataclasses import dataclass
-from state import State
-from country import Country
+
+from .country import Country
+from .state import State
 
 
 @dataclass
@@ -14,4 +15,3 @@ class PostalAddress:
     timezone: str
     jamBaseMetroId: int
     jamBaseCityId: int
-

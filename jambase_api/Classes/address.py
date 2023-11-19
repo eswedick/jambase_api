@@ -1,6 +1,7 @@
 from dataclasses import dataclass
-from jambase_api.Enums.state import StateCode
-from jambase_api.Enums.country_iso2 import CountryCodeIso2
+
+from ..Enums.country_iso2 import CountryCodeIso2
+from ..Enums.state import StateCode
 
 
 @dataclass

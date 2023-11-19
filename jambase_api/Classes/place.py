@@ -1,7 +1,7 @@
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 
 
 @dataclass
 class Place:
-    type: str = field(metadata={"name": "@type"})
+    type: str
     name: str

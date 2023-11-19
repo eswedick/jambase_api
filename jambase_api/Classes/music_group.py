@@ -1,10 +1,11 @@
 from dataclasses import dataclass
 from typing import List
-from place import Place
-from member import Member
-from jambase_api.Enums.band_or_musician import BandOrMusician
-from jambase_api.Enums.genre import Genre
-from url import Url
+
+from ..Enums.band_or_musician import BandOrMusician
+from ..Enums.genre import Genre
+from .member import Member
+from .place import Place
+from .url import Url
 
 
 @dataclass
@@ -22,6 +23,6 @@ class MusicGroup:
     foundingLocation: Place
     foundingDate: str
     genre: List[Genre]
-    #events: List[Union[Concert, Festival, Stream]]
+    # events: List[Union[Concert, Festival, Stream]]
     xbandOrMusician: BandOrMusician
     xnumUpcomingEvents: int

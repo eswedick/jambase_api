@@ -1,4 +1,4 @@
-from jambase_api.APISections.base import JamBaseBase
+from .base import JamBaseBase
 
 
 class JamBaseDataSources(JamBaseBase):
@@ -17,4 +17,3 @@ class JamBaseDataSources(JamBaseBase):
     def get_venue_data_sources(self):
         """Returns all Venue Data Sources in Alphabetical order"""
         return self.call_api_get("lookups/venue-data-sources/")
-

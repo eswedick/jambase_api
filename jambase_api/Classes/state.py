@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
-from jambase_api.Classes.country import Country
+
+from .country import Country
 
 
 @dataclass

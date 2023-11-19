@@ -1,14 +1,16 @@
-from distutils.core import setup
+from setuptools import setup, find_packages
+
+requirements = ["requests==2.31.0"]
+setup_requirements = ["pytest~=7.4.3",
+                      "twine==1.14.0"]
+
+test_requirements = ['pytest>=3', ]
+
 setup(
     name='jambase_api',
-    packages=[
-        "jambase_api",
-        "jambase_api.APISections",
-        "jambase_api.Classes",
-        "jambase_api.Enums",
-        "jambase_api.ParameterTypes",
-    ],
-    version='1.0.7',
+    packages=find_packages(include=["jambase_api", "jambase_api.*"]),
+    include_package_data=True,
+    version='1.0.11',
     description='Python API wrapper for Jambase API',
     author='Evan Swedick',
     license='MIT',
@@ -16,26 +18,10 @@ setup(
     url='https://github.com/eswedick/jambase_api',
     long_description=open("README.md", "r").read(),
     long_description_content_type="text/markdown",
-    python_requires='>=3.6',
+    install_requires=requirements,
+    setup_requires=setup_requirements,
+    python_requires='>=3.9',
+    test_suite='tests',
+    tests_require=test_requirements,
+    zip_safe=False,
 )
-# from setuptools import setup
-#
-# setup(
-#     name="jambase_api",
-#     version="1.0.6",
-#     packages=[
-#         "jambase_api",
-#         "jambase_api.APISections",
-#         "jambase_api.Classes",
-#         "jambase_api.Enums",
-#         "jambase_api.ParameterTypes",
-#     ],
-#     url="https://github.com/eswedick/jambase_api",
-#     license="MIT",
-#     author="Evan Swedick",
-#     author_email="evan@swedick.io",
-#     description="Python API wrapper for Jambase API",
-#     long_description=open("README.md", "r").read(),
-#     long_description_content_type="text/markdown",
-#     install_requires=("requests", "packaging"),
-# )

@@ -57,4 +57,3 @@ class StreamDataSource(Enum):
     VOLUME = "volume.com"
     YOURSHOW = "yourshow.live"
     YOUTUBE = "youtube.com"
-

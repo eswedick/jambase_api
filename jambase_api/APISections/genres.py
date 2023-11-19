@@ -1,4 +1,4 @@
-from jambase_api.APISections.base import JamBaseBase
+from .base import JamBaseBase
 
 
 class JamBaseGenres(JamBaseBase):

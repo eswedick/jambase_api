@@ -1,4 +1,4 @@
-from jambase_api.APISections.base import JamBaseBase
+from .base import JamBaseBase
 
 
 class JamBaseEvents(JamBaseBase):
@@ -14,7 +14,7 @@ class JamBaseEvents(JamBaseBase):
 
     def get_events_by_artist(self, artist_data_source, artist_id, **kwargs):
         """Search for events by artist"""
-        kwargs["artistId"] = artist_data_source+":"+artist_id
+        kwargs["artistId"] = artist_data_source + ":" + artist_id
         return self.call_api_get("events", kwargs=kwargs)
 
     def get_events_by_city(self, city_id, **kwargs):
@@ -24,4 +24,6 @@ class JamBaseEvents(JamBaseBase):
 
     def get_event(self, event_data_source, event_id, **kwargs):
         """Get event data by data source and id"""
-        return self.call_api_get("events/id/"+event_data_source+":"+event_id, kwargs=kwargs)
+        return self.call_api_get(
+            "events/id/" + event_data_source + ":" + event_id, kwargs=kwargs
+        )

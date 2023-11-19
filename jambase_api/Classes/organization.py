@@ -1,6 +1,7 @@
 from dataclasses import dataclass
 from typing import List
-from url import Url
+
+from .url import Url
 
 
 @dataclass

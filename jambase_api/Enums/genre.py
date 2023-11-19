@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class Genre(Enum):
     BLUEGRASS = "bluegrass"
     BLUES = "blues"

@@ -3,6 +3,7 @@ from enum import Enum
 
 class ArtistSearch(Enum):
     """List of possible parameters to pass into the Artist API section"""
+
     artistId = "artistId"
     artistName = "artistName"
     artistHasUpcomingEvents = "artistHasUpcomingEvents"
