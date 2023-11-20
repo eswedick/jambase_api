@@ -10,7 +10,7 @@ setup(
     name='jambase_api',
     packages=find_packages(include=["jambase_api", "jambase_api.*"]),
     include_package_data=True,
-    version='1.0.11',
+    version='1.0.0',
     description='Python API wrapper for Jambase API',
     author='Evan Swedick',
     license='MIT',
